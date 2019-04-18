@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using System.IO;
 using NLog;
 using KB.Middleware;
+using Microsoft.AspNetCore.Identity;
 
 namespace KB
 {
@@ -40,6 +41,9 @@ namespace KB
 
             services.ConfigureIISIntergration();
 
+            //services.AddDefaultIdentity<IdentityUser>()
+            //    .AddDefaultUI(UIFramework)
+
             services.ConfigureSqlContext(Configuration);
 
             services.ConfigureLoggerService();
@@ -50,7 +54,11 @@ namespace KB
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.ConfigureAuthorizationFilter();
+
             services.ConfigureActionFilter();
+
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,10 +75,12 @@ namespace KB
                 app.ConfigGlobalExceptionHandler();
                 app.UseHsts();
             }
-                        
+
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

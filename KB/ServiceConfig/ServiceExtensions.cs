@@ -83,6 +83,15 @@ namespace KB.ServiceConfig
             services.AddScoped<ActionFilter>();
         }
 
+        /// <summary>
+        /// authorization filter config
+        /// </summary>
+        /// <param name="services"></param>
+        public static void ConfigureAuthorizationFilter(this IServiceCollection services)
+        {
+            services.AddScoped<AuthorizationFilter>();
+        }
+
         public static void ConfigureServicesContainer(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();

@@ -26,5 +26,14 @@ namespace Services
             var user = query.FirstOrDefault();
             return query.FirstOrDefault();
         }
+
+        public FY_User GetUserById(Guid userGuid)
+        {
+            var query = from x in _db.FY_User.Where(x => x.UserId == userGuid)
+                        select x;
+
+            var user = query.FirstOrDefault();
+            return user;
+        }
     }
 }

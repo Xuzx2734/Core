@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using KB.Models;
 using Contracts;
+using KB.Filter;
+using System.IO;
+using Entities.Models;
 
 namespace KB.Controllers
 {
+    [ServiceFilter(typeof(AuthorizationFilter))]
+    [ServiceFilter(typeof(ActionFilter))]
     public class HomeController : Controller
     {
         private ILoggerManager _logger;
@@ -29,7 +34,14 @@ namespace KB.Controllers
         public IActionResult Index()
         {
             var user = _userService.GetUserByAccount("xuzx");
-
+            if(user != null)
+            {
+                var userModelStr = new UserModelDto(user).ToString();
+                using (var ms = new MemoryStream())
+                {
+                    //HttpContext.User.Identity
+                }
+            }
             return View();
         }
 
