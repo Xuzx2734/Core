@@ -1,0 +1,98 @@
+2019-04-19 16:10:37.9828 INFO authorization
+2019-04-19 16:10:38.4335 INFO action executing
+2019-04-19 16:10:39.6853 INFO action executed
+2019-04-19 16:10:39.6854 INFO result executing
+2019-04-19 16:10:39.9666 INFO result executed
+2019-04-19 16:15:44.4852 INFO authorization
+2019-04-19 16:15:44.4852 INFO action executing
+2019-04-19 16:15:44.7143 INFO action executed
+2019-04-19 16:15:44.7143 INFO result executing
+2019-04-19 16:15:47.1405 INFO result executed
+2019-04-19 16:22:50.6872 INFO authorization
+2019-04-19 16:25:19.8309 INFO authorization
+2019-04-19 16:28:00.4205 INFO authorization
+2019-04-19 16:28:00.9491 INFO authorization
+2019-04-19 16:28:01.2851 INFO action executing
+2019-04-19 16:28:02.5867 INFO action executed
+2019-04-19 16:28:02.5867 INFO result executing
+2019-04-19 16:28:02.8025 INFO result executed
+2019-04-19 16:29:02.5634 INFO authorization
+2019-04-19 16:29:02.7144 INFO action executing
+2019-04-19 16:29:03.1956 INFO action executed
+2019-04-19 16:29:03.1956 INFO result executing
+2019-04-19 16:29:03.3205 INFO result executed
+2019-04-19 16:29:34.5369 INFO authorization
+2019-04-19 16:29:35.1308 INFO action executing
+2019-04-19 16:29:36.7396 INFO action executed
+2019-04-19 16:29:36.7529 INFO result executing
+2019-04-19 16:29:37.1775 INFO result executed
+2019-04-19 16:30:00.0703 INFO authorization
+2019-04-19 16:30:00.0915 INFO action executing
+2019-04-19 16:30:00.5322 INFO action executed
+2019-04-19 16:30:00.5542 INFO result executing
+2019-04-19 16:30:00.6371 INFO result executed
+2019-04-19 16:30:37.9453 INFO authorization
+2019-04-19 16:30:38.2551 INFO authorization
+2019-04-19 16:30:38.2551 INFO action executing
+2019-04-19 16:30:38.3819 INFO action executed
+2019-04-19 16:30:38.3819 INFO result executing
+2019-04-19 16:30:38.3929 INFO result executed
+2019-04-19 16:31:23.6155 INFO authorization
+2019-04-19 16:31:23.7277 INFO authorization
+2019-04-19 16:31:23.7336 INFO action executing
+2019-04-19 16:31:23.8656 INFO action executed
+2019-04-19 16:31:23.8656 INFO result executing
+2019-04-19 16:31:23.8765 INFO result executed
+2019-04-19 16:31:25.5663 INFO authorization
+2019-04-19 16:31:25.5663 INFO action executing
+2019-04-19 16:31:25.6935 INFO action executed
+2019-04-19 16:31:25.6935 INFO result executing
+2019-04-19 16:31:25.7015 INFO result executed
+2019-04-19 16:31:26.6487 INFO authorization
+2019-04-19 16:31:26.6487 INFO action executing
+2019-04-19 16:31:26.7748 INFO action executed
+2019-04-19 16:31:26.7748 INFO result executing
+2019-04-19 16:31:26.7853 INFO result executed
+2019-04-19 16:31:38.9323 INFO authorization
+2019-04-19 16:31:38.9643 INFO action executing
+2019-04-19 16:31:39.1089 INFO action executed
+2019-04-19 16:31:39.1089 INFO result executing
+2019-04-19 16:31:39.1089 INFO result executed
+2019-04-19 16:31:39.8993 INFO authorization
+2019-04-19 16:31:39.9049 INFO action executing
+2019-04-19 16:31:40.0667 INFO action executed
+2019-04-19 16:31:40.0667 INFO result executing
+2019-04-19 16:31:40.0884 INFO result executed
+2019-04-19 16:35:51.9160 INFO authorization
+2019-04-19 16:35:52.3538 INFO authorization
+2019-04-19 16:35:52.3962 INFO action executing
+2019-04-19 16:35:52.6685 INFO action executed
+2019-04-19 16:35:52.6712 INFO result executing
+2019-04-19 16:35:52.6712 INFO result executed
+2019-04-19 16:35:55.1562 INFO authorization
+2019-04-19 16:35:55.1562 INFO action executing
+2019-04-19 16:35:55.3566 INFO action executed
+2019-04-19 16:35:55.3582 INFO result executing
+2019-04-19 16:35:55.3582 INFO result executed
+2019-04-19 16:40:02.5451 INFO authorization
+2019-04-19 16:40:02.9644 INFO action executing
+2019-04-19 16:40:04.4875 INFO action executed
+2019-04-19 16:40:04.5016 INFO result executing
+2019-04-19 16:40:04.8547 INFO result executed
+2019-04-19 16:40:17.2874 INFO authorization
+2019-04-19 16:40:17.3072 INFO action executing
+2019-04-19 16:40:32.6773 INFO action executed
+2019-04-19 16:40:32.6773 INFO result executing
+2019-04-19 16:40:32.6918 INFO result executed
+2019-04-19 16:41:40.2181 INFO authorization
+2019-04-19 16:41:40.6005 INFO action executing
+2019-04-19 16:41:41.7207 INFO action executed
+2019-04-19 16:41:41.7350 INFO result executing
+2019-04-19 16:41:41.9510 INFO result executed
+2019-04-19 16:45:18.9216 INFO authorization
+2019-04-19 16:47:58.8188 INFO authorization
+2019-04-19 16:48:17.1715 INFO authorization
+2019-04-19 16:48:17.6076 INFO action executing
+2019-04-19 16:48:22.1823 INFO action executed
+2019-04-19 16:48:22.1878 INFO result executing
+2019-04-19 16:48:22.5922 INFO result executed

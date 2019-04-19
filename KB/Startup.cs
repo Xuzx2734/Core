@@ -15,6 +15,10 @@ using System.IO;
 using NLog;
 using KB.Middleware;
 using Microsoft.AspNetCore.Identity;
+using Repository;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace KB
 {
@@ -41,10 +45,15 @@ namespace KB
 
             services.ConfigureIISIntergration();
 
-            //services.AddDefaultIdentity<IdentityUser>()
-            //    .AddDefaultUI(UIFramework)
-
             services.ConfigureSqlContext(Configuration);
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme,
+                options =>
+                {
+                    options.LoginPath = new PathString("/Account/Login/");
+                    options.AccessDeniedPath = new PathString("/Account/Forbidden");
+                });
 
             services.ConfigureLoggerService();
 
@@ -52,7 +61,13 @@ namespace KB
 
             services.ConfigureServicesContainer();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                                            .RequireAuthenticatedUser()
+                                            .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));                
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.ConfigureAuthorizationFilter();
 

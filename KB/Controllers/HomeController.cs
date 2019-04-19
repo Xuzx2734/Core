@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using KB.Models;
 using Contracts;
 using KB.Filter;
@@ -12,6 +13,7 @@ using Entities.Models;
 
 namespace KB.Controllers
 {
+    [Authorize]
     [ServiceFilter(typeof(AuthorizationFilter))]
     [ServiceFilter(typeof(ActionFilter))]
     public class HomeController : Controller
@@ -30,7 +32,8 @@ namespace KB.Controllers
             _repoWrapper = repoWrapper;
             _userService = userService;
         }
-        
+
+        [Authorize(Roles = "Administrator")]
         public IActionResult Index()
         {
             var user = _userService.GetUserByAccount("xuzx");
