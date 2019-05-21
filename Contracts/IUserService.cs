@@ -10,5 +10,7 @@ namespace Contracts
         FY_User GetUserByAccount(string userAccount);
 
         FY_User GetUserById(Guid userGuid);
+
+        IEnumerable<FY_User> GetAllUsers();
     }
 }

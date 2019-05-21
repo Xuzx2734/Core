@@ -10,6 +10,7 @@ using Contracts;
 using KB.Filter;
 using System.IO;
 using Entities.Models;
+using AutoMapper;
 
 namespace KB.Controllers
 {
@@ -21,30 +22,38 @@ namespace KB.Controllers
         private ILoggerManager _logger;
         private IRepositoryWrapper _repoWrapper;
         private IUserService _userService;
+        private IMapper _mapper;
 
         public HomeController(
             ILoggerManager logger, 
             IRepositoryWrapper repoWrapper,
-            IUserService userService
+            IUserService userService,
+            IMapper mapper
             )
         {
             _logger = logger;
             _repoWrapper = repoWrapper;
             _userService = userService;
+            _mapper = mapper;
         }
 
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         public IActionResult Index()
         {
             var user = _userService.GetUserByAccount("xuzx");
             if(user != null)
             {
-                var userModelStr = new UserModelDto(user).ToString();
-                using (var ms = new MemoryStream())
-                {
-                    //HttpContext.User.Identity
-                }
+                //var userModelStr = new UserModelDto(user).ToString();
+
+                var userModel = _mapper.Map<UserModelDto>(user);
             }
+
+            var list = _userService.GetAllUsers();
+            if (list.Any())
+            {
+                var userModelList = _mapper.Map<IEnumerable<FY_User>, IEnumerable<UserModelDto>>(list);
+            }
+            
             return View();
         }
 

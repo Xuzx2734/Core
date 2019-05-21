@@ -35,5 +35,16 @@ namespace Services
             var user = query.FirstOrDefault();
             return user;
         }
+
+        public IEnumerable<FY_User> GetAllUsers()
+        {
+            var query = from x in _db.FY_User
+                        select x;
+
+            var list = query.ToList();
+
+            return list;
+        }
+
     }
 }

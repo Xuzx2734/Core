@@ -1,4 +1,5 @@
-﻿using Contracts;
+﻿using AutoMapper;
+using Contracts;
 using Entities;
 using KB.Filter;
 using LoggerService;
@@ -95,6 +96,19 @@ namespace KB.ServiceConfig
         public static void ConfigureServicesContainer(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
+        }
+
+        public static void ConfigureAutoMapper(this IServiceCollection services)
+        {
+            var config = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoMapperProfileConfig());
+            });
+
+            var mapper = config.CreateMapper();
+
+            services.AddSingleton(mapper);
+
         }
 
     }

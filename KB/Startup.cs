@@ -61,6 +61,8 @@ namespace KB
 
             services.ConfigureServicesContainer();
 
+            services.ConfigureAutoMapper();
+
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
@@ -74,6 +76,7 @@ namespace KB
             services.ConfigureActionFilter();
 
             services.AddSession();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
