@@ -40,19 +40,19 @@ namespace KB.Controllers
         //[Authorize(Roles = "Administrator")]
         public IActionResult Index()
         {
-            var user = _userService.GetUserByAccount("xuzx");
-            if(user != null)
-            {
-                //var userModelStr = new UserModelDto(user).ToString();
+            //var user = _userService.GetUserByAccount("xuzx");
+            //if(user != null)
+            //{
+            //    //var userModelStr = new UserModelDto(user).ToString();
 
-                var userModel = _mapper.Map<UserModelDto>(user);
-            }
+            //    var userModel = _mapper.Map<UserModelDto>(user);
+            //}
 
-            var list = _userService.GetAllUsers();
-            if (list.Any())
-            {
-                var userModelList = _mapper.Map<IEnumerable<FY_User>, IEnumerable<UserModelDto>>(list);
-            }
+            //var list = _userService.GetAllUsers();
+            //if (list.Any())
+            //{
+            //    var userModelList = _mapper.Map<IEnumerable<FY_User>, IEnumerable<UserModelDto>>(list);
+            //}
             
             return View();
         }
