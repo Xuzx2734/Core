@@ -98,6 +98,10 @@ namespace KB.ServiceConfig
             services.AddScoped<IUserService, UserService>();
         }
 
+        /// <summary>
+        /// config automapper mapping relationship
+        /// </summary>
+        /// <param name="services"></param>
         public static void ConfigureAutoMapper(this IServiceCollection services)
         {
             var config = new MapperConfiguration(mc =>
