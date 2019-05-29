@@ -19,10 +19,10 @@ namespace KB.Controllers
     [ServiceFilter(typeof(ActionFilter))]
     public class HomeController : Controller
     {
-        private ILoggerManager _logger;
-        private IRepositoryWrapper _repoWrapper;
-        private IUserService _userService;
-        private IMapper _mapper;
+        private readonly ILoggerManager _logger;
+        private readonly IRepositoryWrapper _repoWrapper;
+        private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
         public HomeController(
             ILoggerManager logger, 
@@ -46,12 +46,6 @@ namespace KB.Controllers
                 //var userModelStr = new UserModelDto(user).ToString();
 
                 var userModel = _mapper.Map<UserModelDto>(user);
-            }
-
-            var list = _userService.GetAllUsers();
-            if (list.Any())
-            {
-                var userModelList = _mapper.Map<IEnumerable<FY_User>, IEnumerable<UserModelDto>>(list);
             }
             
             return View();
