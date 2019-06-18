@@ -1,0 +1,124 @@
+[
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/bundles.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js",
+      "wwwroot/lib/jquery/dist/jquery.js",
+      "wwwroot/js/main.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false,
+    "includeInProject": true
+  },
+  {
+    "outputFileName": "wwwroot/js/bundles.js",
+    "inputFiles": [
+      "wwwroot/js/site.js",
+      "wwwroot/lib/jquery/dist/jquery.js",
+      "wwwroot/js/main.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": true
+    },
+    "sourceMap": false,
+    "includeInProject": true
+  },
+  {
+    "outputFileName": "wwwroot/css/genbundle.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "wwwroot/lib/font-awesome/css/fontawesome.css",
+      "wwwroot/lib/nprogress/nprogress.css",
+      "wwwroot/lib/iCheck/skins/flat/green.css",
+      "wwwroot/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css",
+      "wwwroot/lib/jqvmap/jqvmap.min.css",
+      "wwwroot/lib/bootstrap-daterangepicker/daterangepicker.css",
+      "wwwroot/css/custom.min.css",
+      "wwwroot/lib/jqvmap/jqvmap.min.css",
+      "wwwroot/lib/jqvmap/jqvmap.min.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": true
+    },
+    "sourceMap": false,
+    "includeInProject": true
+  },
+  //{
+  //  "outputFileName": "wwwroot/css/genbundle.min.css",
+  //  "inputFiles": [
+  //    "wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+  //    "wwwroot/lib/font-awesome/css/fontawesome.css",
+  //    "wwwroot/lib/nprogress/nprogress.css",
+  //    "wwwroot/lib/iCheck/skins/flat/green.css",
+  //    "wwwroot/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css",
+  //    "wwwroot/vendors/jqvmap/dist/jquery.vmap.js",
+  //    "wwwroot/lib/bootstrap-daterangepicker/daterangepicker.css",
+  //    "wwwroot/css/custom.min.css",
+  //    "wwwroot/lib/jqvmap/jqvmap.min.css",
+  //    "wwwroot/lib/jqvmap/jqvmap.min.css"
+  //  ],
+  //  "minify": {
+  //    "enabled": true,
+  //    "renameLocals": true
+  //  },
+  //  "sourceMap": false,
+  //  "includeInProject": true
+  //},
+  {
+    "outputFileName": "wwwroot/js/genbundle.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.js",
+      "wwwroot/lib/bootstrap/dist/bootstrap.min.js",
+      "wwwroot/lib/fastclick/fastclick.min.js",
+      "wwwroot/lib/nprogress/nprogress.min.js",
+      "wwwroot/lib/Chart.js/Chart.min.js",
+      "wwwroot/vendors/gauge.js/dist/gauge.min.js",
+      "wwwroot/ventors/bootstrap-progressbar/bootstrap-progressbar.min.js",
+      "wwwroot/lib/iCheck/icheck.min.js",
+      "wwwroot/lib/skycons/skycons.min.js",
+      "wwwroot/lib/vendors/Flot/jquery.flot.js",
+      "wwwroot/lib/vendors/Flot/jquery.flot.pie.js",
+      "wwwroot/vendors/Flot/jquery.flot.time.js",
+      "wwwroot/vendors/Flot/jquery.flot.stack.js",
+      "wwwroot/vendors/Flot/jquery.flot.resize.js",
+      "wwwroot/vendors/flot.orderbars/js/jquery.flot.orderBars.js",
+      "wwwroot/vendors/flot-spline/js/jquery.flot.spline.min.js",
+      "wwwroot/vendors/flot.curvedlines/curvedLines.js",
+      "wwwroot/vendors/DateJS/build/date.js",
+      "wwwroot/vendors/jqvmap/dist/jquery.vmap.js",
+      "wwwroot/vendors/jqvmap/dist/maps/jquery.vmap.world.js",
+      "wwwroot/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js",
+      "wwwroot/lib/bootstrap-daterangepicker/daterangepicker.min.js",
+      "wwwroot/lib/moment.js/moment.min.js",
+      "wwwroot/js/custom.min.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": true
+    },
+    "sourceMap": false,
+    "includeInProject": true
+  }
+]
