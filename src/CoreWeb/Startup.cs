@@ -22,6 +22,7 @@ using NLog;
 using Repository;
 using CoreWeb.ServiceConfig;
 using CoreWeb.Middleware;
+using Microsoft.Extensions.FileProviders;
 
 namespace CoreWeb
 {
@@ -65,7 +66,7 @@ namespace CoreWeb
             services.ConfigureServicesContainer();
 
             services.ConfigureAutoMapper();
-
+            
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
