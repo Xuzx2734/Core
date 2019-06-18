@@ -88,7 +88,6 @@ namespace CoreWeb
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-
             }
             else
             {

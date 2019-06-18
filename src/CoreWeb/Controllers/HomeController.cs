@@ -5,13 +5,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoreWeb.Models;
+using Contracts;
+using CoreWeb.Filter;
 
 namespace CoreWeb.Controllers
 {
+    //[ServiceFilter(typeof(ActionFilter))]
     public class HomeController : Controller
     {
+        private readonly ILoggerManager _logger;
+
+        public HomeController(ILoggerManager logger)
+        {
+            _logger = logger;
+        }
+
         public IActionResult Index()
         {
+            _logger.LogInfo("index");
             return View();
         }
 
